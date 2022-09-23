@@ -156,7 +156,6 @@ function materialScale(hex: string, baseColor: BaseColorKey): Scale {
   const scale = colorKeys.reduce((acc, curr: string, idx: number) => {
     const modifiedHCL: number[] = materialColorSchema[baseColor][idx].map(
       (rangeValue, index) => {
-        console.log(rangeValue, hcl[index], "WTF IS THIS")
         return hcl[index] + rangeValue
       }
     );
